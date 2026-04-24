@@ -1,7 +1,6 @@
 import type { Certification } from "@/data/certifications";
 import clsx from "clsx";
 import { useState } from "react";
-import { Calendar, ExternalLink, Award, ShieldAlert, Search } from "lucide-react"; // Optionnel: nécessite lucide-react
 
 function formatDate(s: string) {
   const [y, m] = s.split("-");
