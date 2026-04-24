@@ -27,7 +27,7 @@ export default function EducationPage() {
       </div>
 
       <div className="relative border-l-2 border-muted pl-8 ml-4 space-y-12">
-        {education.map((e, index) => (
+        {education.map((e) => (
           <div key={e.school + e.start} className="relative">
             {/* Le point de la timeline avec effet de halo */}
             <div className="absolute -left-[41px] top-1.5 flex items-center justify-center">
