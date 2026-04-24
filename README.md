@@ -1,103 +1,71 @@
-# Portfolio NOUHAYLA SABIQ
+# 🌐 Mon Portfolio
 
-Portfolio professionnel React + Vite + TypeScript + Tailwind CSS.
+## 📌 Description
+Ce projet est un portfolio personnel moderne développé avec **React**, **Vite** et **TypeScript**.  
+Il permet de présenter mes compétences, projets, certifications et expériences de manière interactive et responsive.
 
-## 🚀 Démarrage rapide
+---
 
-### Étape 1 — Cloner et installer
+## 🚀 Fonctionnalités
 
-```bash
-# Copier ce dossier ou cloner depuis GitHub
-cd mon-portfolio
-npm install
-```
+- ⚡ Interface rapide grâce à Vite
+- 🎨 Design moderne avec Tailwind CSS
+- 📱 Responsive (mobile, tablette, desktop)
+- 🧭 Navigation avec React Router
+- 🧾 Gestion des pages : Home, Projets, Certifications, Contact
+- 🎬 Animations fluides avec Framer Motion
+- 🔍 Filtrage et recherche dans certaines sections
+- 🧩 Composants réutilisables (cards, sections, etc.)
 
-### Étape 2 — shadcn/ui (à faire une seule fois)
+---
 
-```bash
-npx shadcn@latest init
-# Choisir : Default, Slate, src/components/ui
-npx shadcn@latest add button card badge input textarea separator avatar
-```
+## 🛠️ Technologies utilisées
 
-### Étape 3 — Lancer en développement
+- React 18
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Router DOM
+- Framer Motion
+- Lucide React (icônes)
+- React Helmet Async
 
-```bash
-npm run dev
-# → http://localhost:5173
-```
+---
 
-### Étape 4 — Personnaliser ton contenu
+## 📁 Structure du projet
 
-- `src/data/profile.ts` → Tes infos personnelles (email, GitHub, LinkedIn)
-- `src/data/certifications.ts` → Tes certifications (déjà remplies !)
-- `src/data/projects.ts` → Tes projets
-- `src/data/education.ts` → Tes formations
+````
+portfolio_oussama/
+│
+├── public/ # Fichiers statiques
+├── src/
+│ ├── components/ # Composants réutilisables
+│ ├── pages/ # Pages principales
+│ ├── data/ # Données (projets, certifications, etc.)
+│ ├── assets/ # Images et ressources
+│ ├── App.tsx # Point principal de l'application
+│ └── main.tsx # Entrée du projet
+│
+├── index.html
+├── tailwind.config.js
+├── vite.config.ts
+├── package.json
+└── tsconfig.json
 
-### Étape 5 — Badges certifications
+````
 
-Placer tes badges (screenshots PDF convertis en WebP) dans `public/certs/` :
-- `public/certs/kotlin-cert.webp`
-- `public/certs/php-cert.webp`
+## 🎯 Objectif du projet
 
-Puis dans `src/data/certifications.ts`, décommenter les lignes `image:`.
+Ce portfolio a été conçu pour :
 
-### Étape 6 — Build et preview
+Présenter mes projets et compétences en développement web
+Mettre en pratique React + TypeScript + Tailwind
+Créer une interface moderne et professionnelle
 
-```bash
-npm run build
-npm run preview
-```
+## Demonstration 
 
-### Étape 7 — Déploiement Vercel
 
-```bash
-git init
-git add .
-git commit -m "feat: portfolio NOUHAYLA SABIQ v1"
-git branch -M main
-git remote add origin https://github.com/TON_USER/mon-portfolio.git
-git push -u origin main
-```
 
-Puis sur [vercel.com](https://vercel.com) :
-1. New Project → Importer ton repo GitHub
-2. Framework: **Vite** (auto-détecté)
-3. Build Command: `npm run build`
-4. Output: `dist`
-5. Deploy 🚀
+## 👨‍💻 Auteur
 
-## 📁 Structure
-
-```
-src/
-├── app/
-│   ├── router.tsx          ← Routes SPA
-│   └── RootLayout.tsx      ← Header + Footer
-├── components/
-│   ├── CertificationCard.tsx
-│   └── ThemeToggle.tsx
-├── data/
-│   ├── profile.ts          ← Tes infos
-│   ├── certifications.ts   ← Tes certifs MLIAEdu
-│   ├── projects.ts         ← Tes projets
-│   └── education.ts        ← Tes formations
-└── pages/
-    ├── Home.tsx
-    ├── Projects.tsx
-    ├── Experience.tsx
-    ├── Education.tsx
-    ├── Certifications.tsx
-    └── Contact.tsx
-```
-
-## 🎨 Certifications intégrées
-
-| Certification | Score | Date |
-|---|---|---|
-| Fondamentaux Kotlin | 78% | 28 fév 2026 |
-| PHP 7 Architecture Multicouche | 92% | 4 mars 2026 |
-
-## 📧 Formulaire Contact
-
-Pour activer le formulaire, créer un compte [Formspree](https://formspree.io) et remplacer `XXXX` dans `src/pages/Contact.tsx` par ton ID.
+Développé par Oussama
