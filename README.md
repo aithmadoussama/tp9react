@@ -2,7 +2,7 @@
 
 ## 📌 Description
 Ce projet est un portfolio personnel moderne développé avec **React**, **Vite** et **TypeScript**.  
-Il permet de présenter mes compétences, projets, certifications et expériences de manière interactive et responsive.
+Il permet de présenter mes compétences, projets, certifications et expériences de manière interactive et responsive. 
 
 ---
 
