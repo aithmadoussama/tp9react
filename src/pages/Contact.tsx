@@ -3,7 +3,6 @@
 import { Helmet } from "react-helmet-async";
 import { profile } from "@/data/profile";
 import { useState } from "react";
-import clsx from "clsx";
 
 export default function Contact() {
   const [sent, setSent] = useState(false);
