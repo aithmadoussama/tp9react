@@ -1,6 +1,7 @@
 import type { Certification } from "@/data/certifications";
 import clsx from "clsx";
 import { useState } from "react";
+import { Award, Calendar, Search, ShieldAlert } from "lucide-react";
 
 function formatDate(s: string) {
   const [y, m] = s.split("-");
