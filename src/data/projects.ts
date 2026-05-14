@@ -24,4 +24,11 @@ export const projects: Project[] = [
     summary:
       "Solution innovante pour optimiser la gestion des flux logistiques de proximité. La plateforme assure une coordination fluide entre clients, livreurs et administrateurs avec une visibilité en temps réel sur l'état des colis. Elle intègre des interfaces mobiles Android intuitives, un système d'historisation des statuts de livraison (logs), une supervision web React et une API REST sécurisée par JWT. L'architecture est optimisée autour de 4 tables pour garantir la performance, avec des tests de bout en bout validant l'intégrité des données.",
   },
+  {
+    title: "PlantAI — Diagnostic des Maladies des Plantes",
+    period: "2026",
+    tags: ["Python", "MobileNetV2", "GradCAM", "Flask", "Google Gemini", "REST API", "PDF", "Deep Learning"],
+    summary:
+      "Solution innovante pour le diagnostic automatisé des maladies des plantes combinant vision par ordinateur et IA générative. Le modèle MobileNetV2 identifie 38 classes de pathologies végétales avec haute précision, complété par GradCAM pour l'interprétabilité visuelle. L'intégration de l'API Google Gemini agit comme un expert agronome virtuel fournissant des conseils de traitement en langage naturel. Le backend Flask assure la génération de rapports PDF détaillés et une interaction via chatbot.",
+  },
 ];
