@@ -25,7 +25,7 @@ export default function Home() {
         <div className="order-2 md:order-1">
           <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            Disponible pour nouveaux projet
+            Disponible pour nouveaux projets
           </div>
           
           <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1]">
