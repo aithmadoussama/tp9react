@@ -80,7 +80,7 @@ export default function Home() {
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-tr from-violet-600 to-emerald-500 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
             <img
-              src="/profile.jpeg"
+              src="/publicprofile.jpeg"
               alt={profile.name}
               className="relative w-64 h-64 md:w-80 md:h-80 rounded-3xl object-cover border border-white/10 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
             />
