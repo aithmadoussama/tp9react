@@ -7,7 +7,7 @@ export default function Projects() {
   return (
     <section className="max-w-6xl mx-auto py-10 animate-in fade-in duration-700">
       <Helmet>
-        <title>Projets — NOUHAYLA SABIQ</title>
+        <title>Projets — AIT HMAD OUSSAMA</title>
         <meta name="description" content="Découvrez les réalisations techniques et projets open-source de NOUHAYLA SABIQ." />
       </Helmet>
 
