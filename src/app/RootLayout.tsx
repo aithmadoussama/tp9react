@@ -31,6 +31,22 @@ export default function RootLayout() {
         : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
     );
 
+  const bar1 = menuOpen
+    ? "block h-0.5 w-6 bg-foreground transition-all duration-300 rotate-45 translate-y-2"
+    : "block h-0.5 w-6 bg-foreground transition-all duration-300";
+
+  const bar2 = menuOpen
+    ? "block h-0.5 w-6 bg-foreground transition-all duration-300 opacity-0"
+    : "block h-0.5 w-6 bg-foreground transition-all duration-300";
+
+  const bar3 = menuOpen
+    ? "block h-0.5 w-6 bg-foreground transition-all duration-300 -rotate-45 -translate-y-2"
+    : "block h-0.5 w-6 bg-foreground transition-all duration-300";
+
+  const dropdownClass = menuOpen
+    ? "md:hidden overflow-hidden transition-all duration-300 border-t border-border/40 bg-background/95 backdrop-blur-xl max-h-96 opacity-100"
+    : "md:hidden overflow-hidden transition-all duration-300 border-t border-border/40 bg-background/95 backdrop-blur-xl max-h-0 opacity-0";
+
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-violet-500/30">
       <header className="sticky top-0 z-[60] w-full border-b border-border/40 bg-background/70 backdrop-blur-xl">
@@ -63,20 +79,15 @@ export default function RootLayout() {
               className="flex flex-col justify-center items-center w-8 h-8 gap-1.5 focus:outline-none"
               aria-label="Toggle menu"
             >
-              <span className={"block h-0.5 w-6 bg-foreground transition-all duration-300 " + (menuOpen ? "rotate-45 translate-y-2" : "")} />
-              <span className={"block h-0.5 w-6 bg-foreground transition-all duration-300 " + (menuOpen ? "opacity-0" : "")} />
-              <span className={"block h-0.5 w-6 bg-foreground transition-all duration-300 " + (menuOpen ? "-rotate-45 -translate-y-2" : "")} />
+              <span className={bar1} />
+              <span className={bar2} />
+              <span className={bar3} />
             </button>
           </div>
         </nav>
 
         {/* Mobile Menu Dropdown */}
-        <div
-          className={
-            "md:hidden overflow-hidden transition-all duration-300 border-t border-border/40 bg-background/95 backdrop-blur-xl " +
-            (menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0")
-          }
-        >
+        <div className={dropdownClass}>
           <div className="mx-auto max-w-6xl px-4 py-3 flex flex-col gap-1">
             <NavLink to="/" end className={mobileNavClass}>Accueil</NavLink>
             <NavLink to="/projects" className={mobileNavClass}>Projets</NavLink>
