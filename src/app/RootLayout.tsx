@@ -60,12 +60,30 @@ export default function RootLayout() {
             <ThemeToggle />
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="flex flex-col justify-center items-center w-8 h-8 gap-1.5 focus:outline-none"
+              className="relative flex flex-col justify-center items-center w-10 h-10 gap-1.5 focus:outline-none z-[70]"
               aria-label="Toggle menu"
             >
-              <span className={"block h-0.5 w-6 bg-foreground transition-all duration-300 " + (menuOpen ? "rotate-45 translate-y-2" : "")} />
-              <span className={"block h-0.5 w-6 bg-foreground transition-all duration-300 " + (menuOpen ? "opacity-0" : "")} />
-              <span className={"block h-0.5 w-6 bg-foreground transition-all duration-300 " + (menuOpen ? "-rotate-45 -translate-y-2" : "")} />
+              {/* Barre du haut */}
+              <span 
+                className={clsx(
+                  "block h-0.5 w-6 bg-current transition-all duration-300", 
+                  menuOpen ? "rotate-45 translate-y-[8px]" : ""
+                )} 
+              />
+              {/* Barre du milieu */}
+              <span 
+                className={clsx(
+                  "block h-0.5 w-6 bg-current transition-all duration-300", 
+                  menuOpen ? "opacity-0" : ""
+                )} 
+              />
+              {/* Barre du bas */}
+              <span 
+                className={clsx(
+                  "block h-0.5 w-6 bg-current transition-all duration-300", 
+                  menuOpen ? "-rotate-45 -translate-y-[8px]" : ""
+                )} 
+              />
             </button>
           </div>
         </nav>
