@@ -12,7 +12,7 @@ export default function RootLayout() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    setMenuOpen(false); // Ferme le menu lors d'un changement de route
+    setMenuOpen(false);
   }, [pathname]);
 
   const navClass = ({ isActive }: { isActive: boolean }) =>
@@ -33,7 +33,6 @@ export default function RootLayout() {
 
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-violet-500/30">
-      {/* Header */}
       <header className="sticky top-0 z-[60] w-full border-b border-border/40 bg-background/70 backdrop-blur-xl">
         <nav className="mx-auto max-w-6xl h-16 flex items-center justify-between px-6">
 
@@ -46,7 +45,7 @@ export default function RootLayout() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1">
             <NavLink to="/" end className={navClass}>Accueil</NavLink>
-            <NavLink to="/project" className={navClass}>Projets</NavLink>
+            <NavLink to="/projects" className={navClass}>Projets</NavLink>
             <NavLink to="/experience" className={navClass}>Parcours</NavLink>
             <NavLink to="/education" className={navClass}>Formations</NavLink>
             <NavLink to="/certifications" className={navClass}>Certs</NavLink>
@@ -64,21 +63,20 @@ export default function RootLayout() {
               className="flex flex-col justify-center items-center w-8 h-8 gap-1.5 focus:outline-none"
               aria-label="Toggle menu"
             >
-              <span className={clsx("block h-0.5 w-6 bg-foreground transition-all duration-300",
-                menuOpen && "rotate-45 translate-y-2")} />
-              <span className={clsx("block h-0.5 w-6 bg-foreground transition-all duration-300",
-                menuOpen && "opacity-0")} />
-              <span className={clsx("block h-0.5 w-6 bg-foreground transition-all duration-300",
-                menuOpen && "-rotate-45 -translate-y-2")} />
+              <span className={"block h-0.5 w-6 bg-foreground transition-all duration-300 " + (menuOpen ? "rotate-45 translate-y-2" : "")} />
+              <span className={"block h-0.5 w-6 bg-foreground transition-all duration-300 " + (menuOpen ? "opacity-0" : "")} />
+              <span className={"block h-0.5 w-6 bg-foreground transition-all duration-300 " + (menuOpen ? "-rotate-45 -translate-y-2" : "")} />
             </button>
           </div>
         </nav>
 
         {/* Mobile Menu Dropdown */}
-        <div className={clsx(
-          "md:hidden overflow-hidden transition-all duration-300 border-t border-border/40 bg-background/95 backdrop-blur-xl",
-          menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        )}>
+        <div
+          className={
+            "md:hidden overflow-hidden transition-all duration-300 border-t border-border/40 bg-background/95 backdrop-blur-xl " +
+            (menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0")
+          }
+        >
           <div className="mx-auto max-w-6xl px-4 py-3 flex flex-col gap-1">
             <NavLink to="/" end className={mobileNavClass}>Accueil</NavLink>
             <NavLink to="/projects" className={mobileNavClass}>Projets</NavLink>
