@@ -46,7 +46,7 @@ export default function RootLayout() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1">
             <NavLink to="/" end className={navClass}>Accueil</NavLink>
-            <NavLink to="/projects" className={navClass}>Projets</NavLink>
+            <NavLink to="/project" className={navClass}>Projets</NavLink>
             <NavLink to="/experience" className={navClass}>Parcours</NavLink>
             <NavLink to="/education" className={navClass}>Formations</NavLink>
             <NavLink to="/certifications" className={navClass}>Certs</NavLink>
